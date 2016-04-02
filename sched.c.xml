@@ -29,7 +29,11 @@
 							<string>A4BDB8E1-D684-48F7-B18E-929570F6BD0B</string>
 							<key>UniqComment</key>
 							<string>调度器入口函数
-注意区分调度和抢占的概念区别</string>
+注意区分调度和抢占的概念区别
+用户层抢占，从Linux系统一开始就有的。
+后来所谓的允许抢占，指的是允许内核抢占，意思是抢占发生在内核代码执行过程中。
+Linux作为一个分时操作系统，本来就有抢占；
+分时和抢占本来就是一体的；以前说没有抢占，不是真的完全没有抢占，而是指的Linux不支持在内核代码运行时进行抢占；所谓的禁止抢占，也禁止的是内核代码运行中的抢占。</string>
 						</dict>
 					</dict>
 					<key>281</key>
@@ -184,9 +188,112 @@ http://r5.loli.io/RjMfYb.jpg
 							<string>从调度函数返回了，则必然是被唤醒了</string>
 						</dict>
 					</dict>
+					<key>601</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict>
+							<key>B39AC315-454B-40CF-AC6C-7F240529D39D</key>
+							<dict>
+								<key>request timer irq</key>
+								<string>839</string>
+							</dict>
+						</dict>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict/>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>C70898E4-7819-4F97-9F2E-61BABA3B2D60</string>
+							<key>UniqComment</key>
+							<string>时钟中断处理函数</string>
+						</dict>
+					</dict>
+					<key>654</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict/>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>D7526497-A10B-440F-A606-B624B646E1A4</string>
+							<key>UniqComment</key>
+							<string>时钟中断的主要作用：刷新jiffies值</string>
+						</dict>
+					</dict>
+					<key>711</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict/>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>34AD9690-23E4-4535-BD0A-2B6742697C84</string>
+							<key>UniqComment</key>
+							<string>启动下半部</string>
+						</dict>
+					</dict>
+					<key>823</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>9AEBE2BE-9CF7-45CA-B6E1-CC3FE938208D</key>
+							<dict>
+								<key>line</key>
+								<string>121</string>
+								<key>offset</key>
+								<string>/kernel</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>sched.c</string>
+								<key>tip</key>
+								<string>sys_call_table</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>221E4712-8B35-4C54-9E91-3EA4B2BDD786</string>
+							<key>UniqComment</key>
+							<string>设置系统调用表
+0x80是系统调用软中断编号</string>
+						</dict>
+					</dict>
 				</dict>
 				<key>LinkToWebKey</key>
 				<dict>
+					<key>036487AD-438B-46C8-89AB-6FC0F588D217</key>
+					<dict>
+						<key>基于优先级的用户层抢占式调度</key>
+						<string>ttp://r6.loli.io/aY3e63.jpeg</string>
+					</dict>
+					<key>2DDDA090-822C-41AB-9414-7702622ECAC7</key>
+					<dict>
+						<key>睡眠进程的唤醒和调度</key>
+						<string>http://r5.loli.io/ENnqam.jpeg</string>
+					</dict>
 					<key>2FDE2593-1AC2-4ECD-A10A-6C96C8FA2C1A</key>
 					<dict>
 						<key>抢占式调度的原始设计</key>
@@ -202,6 +309,21 @@ http://r5.loli.io/RjMfYb.jpg
 						<key>无内核抢占</key>
 						<string>http://r6.loli.io/Uvuyua.jpg</string>
 					</dict>
+					<key>837A4E01-E998-4692-8B00-B0D96F611D40</key>
+					<dict>
+						<key>死锁</key>
+						<string>http://r.loli.io/q2Y3iu.jpeg</string>
+					</dict>
+					<key>B50DB9D0-6C92-4618-9577-E611AF09028D</key>
+					<dict>
+						<key>优先级反转</key>
+						<string>http://r5.loli.io/UryE3a.jpeg</string>
+					</dict>
+					<key>F651E9B9-71BB-49BB-8D7E-BE8A027375AF</key>
+					<dict>
+						<key>基于时间片的用户层抢占式调度</key>
+						<string>http://r6.loli.io/rARnQb.jpeg</string>
+					</dict>
 				</dict>
 				<key>TimeLine</key>
 				<array/>
@@ -213,11 +335,11 @@ http://r5.loli.io/RjMfYb.jpg
 		</dict>
 	</array>
 	<key>owner</key>
-	<string>一月四日名字</string>
+	<string>Gordon</string>
 	<key>project_name</key>
 	<string>linux</string>
 	<key>time</key>
-	<string>2016-02-14 10:26:55</string>
+	<string>2016-04-02 19:06:47</string>
 	<key>version</key>
 	<string>c-p-2</string>
 </dict>
